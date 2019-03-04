@@ -1,0 +1,58 @@
+
+
+# docker commands
+
+
+docker ps
+
+docker ps --all
+
+docker run (p id )
+
+run = create + start
+
+docker run hellow-world
+ = docker create hellow-world + docker start -a (p id )   
+
+docker stop wait for the prgrame to clean and exit safetly within 10 seconds
+
+docker kill
+
+docker system prune erase all stuff from the cash
+
+
+docker exec to excute another proram into the same container 
+
+docker exec -it (p id ) sh  to open shell inside the container
+
+docker exec -it 8a247335f146 redis-cli
+
+docker exec it (container id)  (command)
+
+docker build .   for building docker scripts 
+
+# prefixing docker id with names to use instead of using id 
+#to refer to the same container (it is called image taging)
+docker build -t mcha/redis:latest .
+                name/container name:version
+
+copy ./path to folder to copy from"on your machine relative to the build context"  ./path to copy stuff inside the container
+
+
+#port mapping for incoming traffic to map ports of the container to the ports of the host
+# this is only for incooming traffic
+
+
+docker run -p 8080(route incoming requests to this port on local host):8080(this port inside the container) image id
+
+# any times there comes a request on port 8080 on the local host re-direct this traffic to port 8080 on the container
+
+# docker compose work as networking connection between containers
+#docker compose seprate tool which automate commands for docker cli
+# 
+
+# word sevices in docker refairs to the types of docker container
+
+
+
+
